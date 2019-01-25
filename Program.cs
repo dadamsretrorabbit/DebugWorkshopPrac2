@@ -21,6 +21,12 @@ namespace debugws2
 
     private int cnv(string val)
     {
+     
+
+     
+          if(val.Contains("G")){
+            val = val.Replace("G","E");
+          }
       Int32.TryParse(val, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out int value);
 
       return value;
